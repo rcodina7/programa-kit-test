@@ -16,8 +16,6 @@ import Navbar from "components/Navbar/Navbar";
 import { AuthContext } from "contexts/auth.context";
 
 export default function Home() {
-  const [currentUser, handleCurrentUser, resetUser] = useContext(AuthContext);
-
   return (
     <>
       {/* HEADER */}
