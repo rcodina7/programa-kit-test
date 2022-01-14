@@ -10,6 +10,7 @@ const NavbarStyles = () => ({
     cursor: "pointer",
     display: "flex",
     gap: "1rem",
+    alignItems: "center",
   },
   logoText: {
     color: "white",

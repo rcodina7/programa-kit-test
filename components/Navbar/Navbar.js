@@ -22,6 +22,7 @@ export default function Navbar() {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [currentStyles, setCurrentStyles] = useState();
   const isMoreThan800px = useMediaQuery("(min-width:800px)");
+  const isMoreThan380px = useMediaQuery("(min-width:380px)");
 
   //CONTACT FORM MODAL
   const [open, setOpen] = useState(false);
@@ -139,9 +140,12 @@ export default function Navbar() {
                 height="35"
               />
               <Typography
-                variant="h6"
+                variant={isMoreThan380px ? "h6" : "h5"}
                 component="div"
-                sx={{ ...currentStyles?.logoText }}
+                sx={{
+                  ...currentStyles?.logoText,
+                  fontSize: isMoreThan380px ? "22px" : "18px",
+                }}
               >
                 LOGIC SOLUTIONS
               </Typography>
