@@ -10,7 +10,7 @@ function Servicios({ isUserLoggedIn }) {
     {
       icon: "servicios_logo_1.svg",
       title: "¿En que consiste?",
-      text: "Programa dirigido a pymes y autónomos, del Ministerio de Asuntos Económicos y Transformación Digital que te acompaña en tu proceso de transformación digital. Para que gracias a la tecnología puedas evolucionar y mejorar tu negocio.",
+      text: "Programa dirigido a pymes y autónomos del Ministerio de Asuntos Económicos y Transformación Digital que te acompaña en tu proceso de transformación digital. Para que gracias a la tecnología puedas evolucionar y mejorar tu negocio.",
     },
     {
       icon: "servicios_logo_2.svg",
