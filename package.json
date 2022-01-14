@@ -1,0 +1,38 @@
+{
+  "name": "logic-lock",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/lab": "^5.0.0-alpha.54",
+    "@mui/material": "next",
+    "axios": "^0.24.0",
+    "clsx": "latest",
+    "firebase": "^9.4.1",
+    "framer-motion": "^5.2.1",
+    "mongodb": "^3.5.9",
+    "next": "11.1.2",
+    "nodemailer": "^6.7.1",
+    "prop-types": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-swipeable-views": "^0.14.0",
+    "recharts": "^2.1.4",
+    "validator": "^13.7.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  }
+}

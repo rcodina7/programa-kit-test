@@ -1,0 +1,99 @@
+.imageWrapper {
+  position: relative;
+  width: 100vw;
+  height: clamp(
+    28.125rem,
+    calc(28.125rem + (499 - 450) * ((100vw - 375px) / (1440 - 375))),
+    31.188rem
+  );
+}
+
+.title {
+  font-weight: bold;
+  font-size: clamp(
+    1rem,
+    calc(1rem + (18 - 16) * ((100vw - 375px) / (1440 - 375))),
+    1.125rem
+  );
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.ulCompanyItemsWrapper {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-end;
+}
+
+.ulCompanyItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 100;
+}
+
+.ulCompanyItems > li {
+  font-weight: 600;
+  font-size: 16px;
+  font-size: clamp(
+    0.938rem,
+    calc(0.938rem + (16 - 15) * ((100vw - 375px) / (1440 - 375))),
+    1rem
+  );
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.ulContactItems {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ulContactItems > li:first-child {
+  font-weight: bold;
+  font-size: clamp(
+    1rem,
+    calc(1rem + (18 - 16) * ((100vw - 375px) / (1440 - 375))),
+    1.125rem
+  );
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.ulContactItems > li:nth-child(3) {
+  border: 1px solid #ffffff;
+  align-self: stretch;
+}
+
+.iconContactItem img {
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.iconContactItem:hover img {
+  filter: contrast(0.8);
+}
+
+.copyright {
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  font-size: clamp(
+    0.875rem,
+    calc(0.875rem + (16 - 14) * ((100vw - 375px) / (1440 - 375))),
+    1rem
+  );
+  cursor: help;
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
