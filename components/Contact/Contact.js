@@ -28,18 +28,18 @@ function Contacto() {
               right: "-33.5rem",
               zIndex: "-1",
             }}
-          />
-          <img */}
-          src="/page/contacto_circle.svg" alt="decorative green circle image"
-          style=
-          {{
-            width: "67px",
-            height: "69px",
-            position: "absolute",
-            top: "310rem",
-            right: "1rem",
-            zIndex: 200,
-          }}
+          /> */}
+          <img
+            src="/page/contacto_circle.svg"
+            alt="decorative green circle image"
+            style={{
+              width: "67px",
+              height: "69px",
+              position: "absolute",
+              top: "310rem",
+              right: "1rem",
+              zIndex: 200,
+            }}
           />
         </>
       ) : null}
