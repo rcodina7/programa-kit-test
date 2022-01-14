@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import SimpleLineChart from "./Charts/SimpleLineChart";
 import { parseString } from "xml2js";
-import axios from "axios";
 import HomeScanPage from "./Charts/HomeScanPage";
 import NewScan from "./Charts/NewScan";
 

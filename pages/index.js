@@ -13,24 +13,10 @@ import Testimonios from "components/Testimonios/Testimonios";
 import Footer from "components/Footer/Footer";
 import Contact from "components/Contact/Contact";
 import Navbar from "components/Navbar/Navbar";
-import initFirebaseApp, { firebaseApp } from "firebase.config/firebaseConfig";
 import { AuthContext } from "contexts/auth.context";
-import { getAuth } from "@firebase/auth";
-import { getDatabase } from "@firebase/database";
-import { getApps } from "@firebase/app";
 
 export default function Home() {
   const [currentUser, handleCurrentUser, resetUser] = useContext(AuthContext);
-
-  useEffect(() => {
-    getAuth(firebaseApp).onAuthStateChanged(function (user) {
-      if (user) {
-        handleCurrentUser(user);
-      } else {
-        resetUser();
-      }
-    });
-  }, []);
 
   return (
     <>
@@ -75,12 +61,12 @@ export default function Home() {
       {/* MAIN */}
       <Box component="main">
         <Container maxWidth="xl">
-          <Servicios />
-          <Beneficios />
-          <Planes />
-          <Testimonios />
-          <FAQ />
-          <Contact />
+          {/* <Servicios /> */}
+          {/* <Beneficios /> */}
+          {/* <Planes /> */}
+          {/* <Testimonios /> */}
+          {/* <FAQ /> */}
+          {/* <Contact /> */}
         </Container>
       </Box>
       {/* FOOTER */}

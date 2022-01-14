@@ -12,7 +12,7 @@ function FooterNavbar() {
         width: "100vw",
         position: "absolute",
         top: "clamp(28.125rem, calc(28.125rem + (499 - 450) * ((100vw - 375px) / (1440 - 375))), 31.188rem)",
-        backgroundColor: (theme) => theme.palette.primary.main,
+        backgroundColor: "#3d405b",
       }}
     >
       <Box

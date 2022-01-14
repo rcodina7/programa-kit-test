@@ -99,11 +99,6 @@ export default function Navbar() {
         </MenuItem>
       </Link>
       <Divider />
-      <Link href="#requisitos">
-        <MenuItem>
-          <p>Requisitos</p>
-        </MenuItem>
-      </Link>
       <SolicitudFormDialog
         currentStyles={currentStyles?.li}
         handleClickOpenSolicitud={handleClickOpenSolicitud}
@@ -166,16 +161,7 @@ export default function Navbar() {
                   Servicios
                 </Link>
               </li>
-              <li className={styles.li}>
-                <Link
-                  variant="button"
-                  color="text.primary"
-                  href="#requisitos"
-                  sx={{ ...currentStyles?.li }}
-                >
-                  Requisitos
-                </Link>
-              </li>
+
               <li className={styles.li}>
                 <SolicitudFormDialog
                   currentStyles={currentStyles?.li}

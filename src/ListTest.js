@@ -14,7 +14,6 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import SettingsIcon from "@mui/icons-material/Settings";
 import GoogleButton from "./GoogleButton";
 import { AuthContext } from "contexts/auth.context";
-import { getAuth, signOut } from "@firebase/auth";
 
 export default function ListTest() {
   const router = useRouter();
@@ -26,8 +25,6 @@ export default function ListTest() {
   const handleAuthAction = (type) => {
     router.push(type === "login" ? "/login" : "/registro");
   };
-
-  const handleSignOut = () => signOut(getAuth());
 
   return (
     <List
