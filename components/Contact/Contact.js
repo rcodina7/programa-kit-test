@@ -17,7 +17,7 @@ function Contacto() {
     <Box component="section" sx={{ mt: { xs: 15, md: 22 }, mb: "92px" }}>
       {isMoreThan1000px ? (
         <>
-          <img
+          {/* <img
             src="/page/contacto_bg.svg"
             alt="decorative blue background image"
             style={{
@@ -29,17 +29,17 @@ function Contacto() {
               zIndex: "-1",
             }}
           />
-          <img
-            src="/page/contacto_circle.svg"
-            alt="decorative green circle image"
-            style={{
-              width: "67px",
-              height: "69px",
-              position: "absolute",
-              top: "310rem",
-              right: "1rem",
-              zIndex: 200,
-            }}
+          <img */}
+          src="/page/contacto_circle.svg" alt="decorative green circle image"
+          style=
+          {{
+            width: "67px",
+            height: "69px",
+            position: "absolute",
+            top: "310rem",
+            right: "1rem",
+            zIndex: 200,
+          }}
           />
         </>
       ) : null}
