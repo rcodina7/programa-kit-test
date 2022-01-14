@@ -1,11 +1,8 @@
-import { useMediaQuery } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import MuiButton from "src/MuiButton";
-import ProTip from "src/ProTip";
 import SingleServicio from "./SingleServicio/SingleServicio";
 
-function Servicios({ isUserLoggedIn }) {
+function Servicios() {
   const cardContent = [
     {
       icon: "servicios_logo_1.svg",
@@ -43,9 +40,9 @@ function Servicios({ isUserLoggedIn }) {
           alignItems: "center",
         }}
       >
-        {/* {cardContent.map((card, index) => (
+        {cardContent.map((card, index) => (
           <SingleServicio key={index} num={index + 1} card={card} />
-        ))} */}
+        ))}
       </div>
     </Box>
   );

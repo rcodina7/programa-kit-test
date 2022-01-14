@@ -1,8 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import Image from "next/image";
 import ServicioDialog from "./ServicioDialog/ServicioDialog";
@@ -18,6 +16,7 @@ export default function SingleServicio({ num, card }) {
     "servicios_logo_2.svg",
     "servicios_logo_3.svg",
   ];
+
   return (
     <>
       <Card
@@ -49,12 +48,12 @@ export default function SingleServicio({ num, card }) {
             </h4>
             <p>{card.text}</p>
           </CardContent>
-          <CardActions sx={{ ml: "15rem" }}>
-            <Button size="small" color="primary">
-              Leer más
-            </Button>
-          </CardActions>
         </CardActionArea>
+        <CardActions sx={{ ml: "15rem" }}>
+          <Button size="small" color="primary">
+            Leer más
+          </Button>
+        </CardActions>
       </Card>
       <ServicioDialog
         open={open}

@@ -37,118 +37,53 @@ export default function ServicioDialog({ handleClose, open, num }) {
   const requisitosList = () => {
     return (
       <List dense={false}>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="Ser una pequeña empresa, microempresa o autónomo." />
           </ListItemIcon>
+          <ListItemText primary="Ser una pequeña empresa, microempresa o autónomo." />
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="Cumplir los límites financieros y efectivos que definen las categorías de empresas" />
           </ListItemIcon>
+          <ListItemText primary="Cumplir los límites financieros y efectivos que definen las categorías de empresas" />
         </ListItem>
-
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="Estar en situación de alta y tener la antigüedad mínima que se establece por convocatoria. " />
           </ListItemIcon>
+          <ListItemText primary="Estar en situación de alta y tener la antigüedad mínima que se establece por convocatoria." />
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="No tener consideración de empresa en crisis." />
           </ListItemIcon>
+          <ListItemText primary="No tener consideración de empresa en crisis." />
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="Estar al corriente de las obligaciones tributarias y frente a la Seguridad Social." />
           </ListItemIcon>
+          <ListItemText primary="Estar al corriente de las obligaciones tributarias y frente a la Seguridad Social." />
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="No estar sujeta a una orden de recuperación pendiente de la Comisión Europea que haya declarado una ayuda ilegal e incompatible con el mercado común." />
           </ListItemIcon>
+          <ListItemText primary="No estar sujeta a una orden de recuperación pendiente de la Comisión Europea que haya declarado una ayuda ilegal e incompatible con el mercado común." />
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="No incurrir en ninguna de las prohibiciones previstas en el artículo 13.2 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. " />
           </ListItemIcon>
+          <ListItemText primary="No incurrir en ninguna de las prohibiciones previstas en el artículo 13.2 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. " />
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemIcon
-            sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
-          >
+        <ListItem>
+          <ListItemIcon>
             <CheckCircleIcon />
-            <ListItemText primary="No superar el límite de ayudas mínimas (de pequeña cuantía)." />
           </ListItemIcon>
+          <ListItemText primary="No superar el límite de ayudas mínimas (de pequeña cuantía)." />
         </ListItem>
       </List>
     );

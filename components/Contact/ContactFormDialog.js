@@ -373,7 +373,6 @@ export default function FullScreenDialog({
 
                     <LoadingButton
                       loading={loading}
-                      loadingPosition="end"
                       type="submit"
                       fullWidth
                       variant="contained"
