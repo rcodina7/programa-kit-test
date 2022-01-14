@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container, GlobalStyles, useMediaQuery } from "@mui/material";
-import Link from "next/Link";
+import Link from "next/link";
 import Image from "next/image";
 import HomeIcon from "@mui/icons-material/Home";
 import NavbarDesktopStyles from "./NavbarDesktopStyles";
