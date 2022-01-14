@@ -8,7 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Link from "next/link";
-import Image from "next/Image";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { Divider, useMediaQuery } from "@mui/material";
 import NavbarDesktopStyles from "./NavbarDesktopStyles";
