@@ -49,7 +49,9 @@ export default function SingleServicio({ num, card }) {
             <p>{card.text}</p>
           </CardContent>
         </CardActionArea>
-        <CardActions sx={{ ml: "15rem" }}>
+        <CardActions
+          sx={{ ml: "auto", mr: "auto", transform: "translateX(35%)" }}
+        >
           <Button size="small" color="primary">
             Leer más
           </Button>
