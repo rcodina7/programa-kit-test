@@ -61,7 +61,7 @@ export default function Home() {
       {/* MAIN */}
       <Box component="main">
         <Container maxWidth="xl">
-          {/* <Servicios /> */}
+          <Servicios />
           {/* <Beneficios /> */}
           {/* <Planes /> */}
           {/* <Testimonios /> */}

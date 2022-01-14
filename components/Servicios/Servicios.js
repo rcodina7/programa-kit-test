@@ -43,9 +43,9 @@ function Servicios({ isUserLoggedIn }) {
           alignItems: "center",
         }}
       >
-        {cardContent.map((card, index) => (
+        {/* {cardContent.map((card, index) => (
           <SingleServicio key={index} num={index + 1} card={card} />
-        ))}
+        ))} */}
       </div>
     </Box>
   );
