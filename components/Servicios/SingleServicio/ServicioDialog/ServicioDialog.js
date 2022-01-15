@@ -8,6 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import ProTip from "src/ProTip";
 import {
+  Divider,
   List,
   ListItem,
   ListItemIcon,
@@ -124,6 +125,8 @@ export default function ServicioDialog({ handleClose, open, num }) {
             <ListItemText primary="Cómo solicitar tu bono digital" />
             {openNestedList1 ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+          <Divider />
+
           <Collapse in={openNestedList1} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton
@@ -192,6 +195,8 @@ las necesidades de tu negocio."
             <ListItemText primary="Cómo emplear tu bono digital" />
             {openNestedList2 ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+          <Divider />
+
           <Collapse in={openNestedList2} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton
