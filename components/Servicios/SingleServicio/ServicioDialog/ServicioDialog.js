@@ -7,13 +7,18 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import ProTip from "src/ProTip";
-import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  useMediaQuery,
+} from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ListItemButton from "@mui/material/ListItemButton";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
 import Filter1Icon from "@mui/icons-material/Filter1";
 import Filter2Icon from "@mui/icons-material/Filter2";
 import Filter3Icon from "@mui/icons-material/Filter3";
@@ -25,6 +30,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function ServicioDialog({ handleClose, open, num }) {
   const [openNestedList1, setOpenNestedList1] = React.useState(true);
   const [openNestedList2, setOpenNestedList2] = React.useState(true);
+  const isMoreThan450px = useMediaQuery("(min-width:450px)");
 
   const handleClick1 = () => setOpenNestedList1(!openNestedList1);
   const handleClick2 = () => setOpenNestedList2(!openNestedList2);
@@ -38,51 +44,67 @@ export default function ServicioDialog({ handleClose, open, num }) {
     return (
       <List dense={false}>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="Ser una pequeña empresa, microempresa o autónomo." />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="Cumplir los límites financieros y efectivos que definen las categorías de empresas" />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="Estar en situación de alta y tener la antigüedad mínima que se establece por convocatoria." />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="No tener consideración de empresa en crisis." />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="Estar al corriente de las obligaciones tributarias y frente a la Seguridad Social." />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="No estar sujeta a una orden de recuperación pendiente de la Comisión Europea que haya declarado una ayuda ilegal e incompatible con el mercado común." />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="No incurrir en ninguna de las prohibiciones previstas en el artículo 13.2 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. " />
         </ListItem>
         <ListItem>
-          <ListItemIcon>
-            <CheckCircleIcon />
-          </ListItemIcon>
+          {isMoreThan450px && (
+            <ListItemIcon>
+              <CheckCircleIcon />
+            </ListItemIcon>
+          )}
           <ListItemText primary="No superar el límite de ayudas mínimas (de pequeña cuantía)." />
         </ListItem>
       </List>
@@ -104,7 +126,15 @@ export default function ServicioDialog({ handleClose, open, num }) {
           </ListItemButton>
           <Collapse in={openNestedList1} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4, cursor: "initial" }} disableRipple>
+              <ListItemButton
+                sx={{
+                  pl: 4,
+                  cursor: "initial",
+                  display: "flex",
+                  flexDirection: isMoreThan450px ? "row" : "column",
+                }}
+                disableRipple
+              >
                 <ListItemIcon>
                   <Filter1Icon />
                 </ListItemIcon>
@@ -114,7 +144,15 @@ export default function ServicioDialog({ handleClose, open, num }) {
 ayudarte mejor y recomendarte servicios ajustados a tus necesidades. "
                 />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4, cursor: "initial" }} disableRipple>
+              <ListItemButton
+                sx={{
+                  pl: 4,
+                  cursor: "initial",
+                  display: "flex",
+                  flexDirection: isMoreThan450px ? "row" : "column",
+                }}
+                disableRipple
+              >
                 <ListItemIcon>
                   <Filter2Icon />
                 </ListItemIcon>
@@ -125,7 +163,15 @@ varias de las que ofrecen los agentes digitalizadores. Las que mejor se adapten 
 las necesidades de tu negocio."
                 />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4, cursor: "initial" }} disableRipple>
+              <ListItemButton
+                sx={{
+                  pl: 4,
+                  cursor: "initial",
+                  display: "flex",
+                  flexDirection: isMoreThan450px ? "row" : "column",
+                }}
+                disableRipple
+              >
                 <ListItemIcon>
                   <Filter3Icon />
                 </ListItemIcon>
@@ -148,7 +194,15 @@ las necesidades de tu negocio."
           </ListItemButton>
           <Collapse in={openNestedList2} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4, cursor: "initial" }} disableRipple>
+              <ListItemButton
+                sx={{
+                  pl: 4,
+                  cursor: "initial",
+                  display: "flex",
+                  flexDirection: isMoreThan450px ? "row" : "column",
+                }}
+                disableRipple
+              >
                 <ListItemIcon>
                   <Filter1Icon />
                 </ListItemIcon>
@@ -157,7 +211,15 @@ las necesidades de tu negocio."
                   secondary="y decide con quién quieres desarrollar tu solución digital. "
                 />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4, cursor: "initial" }} disableRipple>
+              <ListItemButton
+                sx={{
+                  pl: 4,
+                  cursor: "initial",
+                  display: "flex",
+                  flexDirection: isMoreThan450px ? "row" : "column",
+                }}
+                disableRipple
+              >
                 <ListItemIcon>
                   <Filter2Icon />
                 </ListItemIcon>
