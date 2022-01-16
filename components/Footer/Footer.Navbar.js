@@ -32,11 +32,11 @@ function FooterNavbar() {
           }}
         >
           <p className={styles.copyright}>
-            Copyright © 2021 Logic Lock | Todos los derechos reservados
+            Copyright © 2021 Logic Solutions | Todos los derechos reservados
           </p>
           <div className={styles.privacy}>
-            <p className={styles.copyright}>Terms Of Services</p>
-            <p className={styles.copyright}>Privacy Policy</p>
+            <p className={styles.copyright}>Política de cookies</p>
+            <p className={styles.copyright}>Aviso legal</p>
           </div>
         </Container>
       </Box>

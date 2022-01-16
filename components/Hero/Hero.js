@@ -9,6 +9,7 @@ import HeroStyles from "./HeroStyles";
 function Hero({ isUserLoggedIn }) {
   const [currentStyles, setCurrentStyles] = useState();
   const isMoreThan800px = useMediaQuery("(min-width:800px)");
+  const isMoreThan450px = useMediaQuery("(min-width:450px)");
 
   useEffect(
     () =>
@@ -38,7 +39,16 @@ function Hero({ isUserLoggedIn }) {
           </span>
           , te acompañamos y asesoramos durante todo el camino para aprovechar
           esta{" "}
-          <span style={{ color: "#79b44c", fontWeight: 700 }}>
+          <span
+            style={{
+              color: "#79b44c",
+              fontWeight: 700,
+              backgroundColor: isMoreThan450px
+                ? "transparent"
+                : "rgba(61, 64, 91, 0.7);",
+              borderRadius: "5px",
+            }}
+          >
             oportunidad para modernizar y hacer crecer tu negocio.
           </span>
         </p>
