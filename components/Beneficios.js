@@ -69,7 +69,13 @@ function Beneficios() {
           digitales de tu negocio.
         </p>
       </div>
-      <Box sx={{ alignSelf: "flex-end" }}>
+      <Box
+        sx={{
+          alignSelf: "flex-end",
+          width: "100%",
+          maxWidth: "500px",
+        }}
+      >
         <BeneficiosCarousel />
       </Box>
     </Box>

@@ -50,7 +50,6 @@ export default function Home() {
         {/* INSIDE HEADER (NAV & HERO) */}
         <Container maxWidth="xl">
           <nav>
-            {/* <NavbarDesktop /> */}
             <Navbar />
           </nav>
           <Hero isUserLoggedIn={true} />
