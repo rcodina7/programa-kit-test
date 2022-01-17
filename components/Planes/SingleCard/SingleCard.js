@@ -11,6 +11,7 @@ import React from "react";
 import MuiButton from "src/MuiButton";
 import { liStyles, singleCardHeaderStyles } from "./SingleCardDesktopStyles";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import SolicitudFormDialog from "components/Solicitud/SolicitudFormDialog";
 
 const displayCardHeader = (service) => {
   return (
@@ -39,6 +40,12 @@ const displayCardHeader = (service) => {
 };
 
 function SingleCard({ service }) {
+  //SOLICITUD FORM MODAL
+  const [openSolicitud, setOpenSolicitud] = React.useState(false);
+  const handleClickOpenSolicitud = () => setOpenSolicitud(true);
+  const handleCloseSolicitud = () => setOpenSolicitud(false);
+  //************ */
+
   return (
     <Grid item key={service.title} xs={12} sm={12} md={12}>
       <Card
@@ -139,11 +146,26 @@ function SingleCard({ service }) {
             ))}
           </ul>
         </CardContent>
-        <CardActions>
+        <CardActions
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           {service.buttonText === "Quiero este plan" ? (
-            <MuiButton fullWidth text="Solicitar" />
+            <SolicitudFormDialog
+              handleClickOpenSolicitud={handleClickOpenSolicitud}
+              handleCloseSolicitud={handleCloseSolicitud}
+              openSolicitud={openSolicitud}
+              type={"solicitudService2"}
+            />
           ) : (
-            <MuiButton fullWidth text="Solicitar" opacity={0.15} customColor />
+            <SolicitudFormDialog
+              handleClickOpenSolicitud={handleClickOpenSolicitud}
+              handleCloseSolicitud={handleCloseSolicitud}
+              openSolicitud={openSolicitud}
+              type={"solicitudServiceFull2"}
+            />
           )}
         </CardActions>
       </Card>

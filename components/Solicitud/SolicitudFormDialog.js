@@ -6,7 +6,14 @@ import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import Link from "next/link";
 import MuiButton from "src/MuiButton";
-import { Container, Grid, MenuItem, Paper, TextField } from "@mui/material";
+import {
+  Container,
+  Grid,
+  MenuItem,
+  Paper,
+  TextField,
+  useMediaQuery,
+} from "@mui/material";
 import Copyright from "src/Copyright";
 import { Box } from "@mui/system";
 import EmailIcon from "@mui/icons-material/Email";
@@ -33,6 +40,7 @@ export default function FullScreenDialog({
   const [displayError, setDisplayError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
+  const isMoreThan500px = useMediaQuery("(min-width:500px)");
 
   //*********************************************************** */
   const handleFormChange = (e) => {
@@ -115,6 +123,24 @@ export default function FullScreenDialog({
         </Link>
       ) : null}
 
+      {type === "solicitudService2" ? (
+        <MuiButton
+          fullWidth
+          text="Solicitar"
+          clickEvent={handleClickOpenSolicitud}
+          sx={{ width: "15rem" }}
+        />
+      ) : type === "solicitudServiceFull2" ? (
+        <MuiButton
+          fullWidth
+          text="Solicitar"
+          opacity={0.15}
+          customColor
+          clickEvent={handleClickOpenSolicitud}
+          sx={{ width: "15rem" }}
+        />
+      ) : null}
+
       <Dialog
         fullScreen
         open={openSolicitud}
@@ -141,8 +167,8 @@ export default function FullScreenDialog({
           aria-label="close"
           sx={{
             position: "absolute",
-            left: "5rem",
-            top: "3rem",
+            left: isMoreThan500px ? "5rem" : "1rem",
+            top: isMoreThan500px ? "3rem" : "1rem",
           }}
         >
           <CloseIcon sx={{ fontSize: 40 }} />

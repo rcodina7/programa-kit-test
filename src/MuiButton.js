@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import { alpha } from "@mui/system";
-import FormDialog from "./FormDialog";
+import SolicitudFormDialog from "components/Solicitud/SolicitudFormDialog";
 import { useRouter } from "next/router";
 
 function MuiButton(props) {
@@ -22,19 +22,20 @@ function MuiButton(props) {
   } = props;
 
   const [open, setOpen] = useState(false);
-  const [signInId, setSignInId] = useState();
 
-  const router = useRouter();
+  //SOLICITUD FORM MODAL
+  const [openSolicitud, setOpenSolicitud] = React.useState(false);
+  const handleClickOpenSolicitud = () => setOpenSolicitud(true);
+  const handleCloseSolicitud = () => setOpenSolicitud(false);
+  //************ */
 
-  const handleClickOpen = () => setOpen(true);
-
-  const handleClose = () => setOpen(false);
-  const handleDashboard = () => router.push("/dashboard");
+  const handleClickOpen = () => {
+    alert("hhh");
+    setOpen(true);
+  };
 
   const handleOnClickEvent = () => {
-    return isUserLoggedIn
-      ? handleDashboard()
-      : isDashboard && handleClickOpen();
+    return isDashboard && handleClickOpenSolicitud();
   };
 
   return (
@@ -67,7 +68,12 @@ function MuiButton(props) {
       >
         {text}
       </Button>
-      <FormDialog handleClose={handleClose} open={open} />
+      {/* <FormDialog handleClose={handleClose} open={open} /> */}
+      <SolicitudFormDialog
+        handleClickOpenSolicitud={handleClickOpenSolicitud}
+        handleCloseSolicitud={handleCloseSolicitud}
+        openSolicitud={openSolicitud}
+      />
     </>
   );
 }

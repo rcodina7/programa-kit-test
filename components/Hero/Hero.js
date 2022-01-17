@@ -56,7 +56,6 @@ function Hero({ isUserLoggedIn }) {
             sx={{ ...currentStyles?.btn, color: "white" }}
             text={"Solicitar ahora"}
             isDashboard
-            isUserLoggedIn={isUserLoggedIn}
             color="secondary"
           />
         )}
@@ -69,12 +68,7 @@ function Hero({ isUserLoggedIn }) {
       />
 
       {!isMoreThan800px && (
-        <MuiButton
-          fullWidth
-          text={"Solicitar ahora"}
-          isDashboard
-          isUserLoggedIn={isUserLoggedIn}
-        />
+        <MuiButton fullWidth text={"Solicitar ahora"} isDashboard />
       )}
     </Box>
   );
