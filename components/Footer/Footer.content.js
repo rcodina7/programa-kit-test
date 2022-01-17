@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Container from "@mui/material/Container";
 import styles from "./Footer.module.css";
 import { Link, useMediaQuery } from "@mui/material";
@@ -33,7 +32,7 @@ function FooterContent() {
             <ul className={styles.ulCompanyItems}>
               <li>
                 <div>
-                  <Image
+                  <img
                     src="/logo_white.png"
                     height="35"
                     width="32"
@@ -104,7 +103,7 @@ function FooterContent() {
                   Aviso legal
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   component={NextLinkComposed}
                   to={{
@@ -115,14 +114,14 @@ function FooterContent() {
                 >
                   Contacto
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <ul className={styles.ulContactItems}>
             <li>Contáctenos</li>
             <li className={styles.iconContactItem}>
               <a href="https://api.whatsapp.com/send?phone=19292381922">
-                <Image
+                <img
                   src="/footer/whatsapp_icon.svg"
                   alt="whatsapp icon contact"
                   height={isMoreThan500px ? 50 : 40}
@@ -139,7 +138,7 @@ function FooterContent() {
                     "https://www.linkedin.com/company/logic-solutions-consulting",
                 }}
               >
-                <Image
+                <img
                   src="/footer/linkedin_icon.svg"
                   alt="linkedin icon contact"
                   height={isMoreThan500px ? 50 : 40}

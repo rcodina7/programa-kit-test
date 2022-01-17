@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import styles from "./Footer.module.css";
 import FooterNavbar from "./Footer.Navbar";
 import FooterContent from "./Footer.content";
@@ -9,11 +8,12 @@ function Footer() {
     <>
       {/* BG IMAGE WRAPPER */}
       <div className={styles.imageWrapper}>
-        <Image
+        <img
           src="/footer/footer_bg.svg"
-          layout="fill"
+          // layout="fill"
           alt="footer green decorative background "
-          priority
+          // priority
+          style={{ width: "100vw", height: "500px" }}
         />
         {/* CONTENT */}
         <FooterContent />

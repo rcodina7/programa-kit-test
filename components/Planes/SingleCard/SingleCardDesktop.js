@@ -6,7 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import MuiButton from "src/MuiButton";
-import Image from "next/image";
 import {
   singleCardStyles,
   singleCardHeaderStyles,
@@ -116,7 +115,7 @@ export default function SingleCardDesktop({ service }) {
                   lineHeight: "22px",
                 }}
               >
-                <Image
+                <img
                   height="27"
                   width="27"
                   src={`/planes/${

@@ -1,6 +1,5 @@
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import MuiButton from "src/MuiButton";
 import { useMediaQuery } from "@mui/material";
 import HeroDesktopStyles from "./HeroDesktopStyles";
@@ -21,7 +20,7 @@ function Hero({ isUserLoggedIn }) {
     <Box sx={{ ...currentStyles?.box }}>
       <div style={{ ...currentStyles?.divWrapper }}>
         <div style={{ ...currentStyles?.imgWrapper }}>
-          <Image
+          <img
             src="/hero/hero_logo.svg"
             height="275"
             width="275"
@@ -62,11 +61,11 @@ function Hero({ isUserLoggedIn }) {
           />
         )}
       </div>
-      <Image
+      <img
         src="/hero/hero_image.svg"
         height="657"
-        width="553"
         alt="decorative hero image"
+        style={{ maxWidth: "553px", width: "100%" }}
       />
 
       {!isMoreThan800px && (

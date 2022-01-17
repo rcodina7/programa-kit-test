@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import FAQ from "components/FAQ";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Hero from "components/Hero/Hero";
-import Image from "next/image";
 import Servicios from "components/Servicios/Servicios";
 import Beneficios from "components/Beneficios";
 import Planes from "components/Planes/Planes";
@@ -40,11 +39,11 @@ export default function Home() {
             zIndex: -1,
           }}
         >
-          <Image
+          <img
             src="/hero/hero_bg.svg"
             alt="decorative background"
             layout="fill"
-            priority
+            style={{ width: "100%", minHeight: "700px", maxHeight: "900px" }}
           />
         </div>
         {/* INSIDE HEADER (NAV & HERO) */}

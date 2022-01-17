@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container, GlobalStyles, useMediaQuery } from "@mui/material";
 import Link from "next/link";
-import Image from "next/image";
 import HomeIcon from "@mui/icons-material/Home";
 import NavbarDesktopStyles from "./NavbarDesktopStyles";
 import NavbarStyles from "./NavbarStyles";
@@ -36,7 +35,7 @@ export default function NavbarOnlyLogo() {
             <Link href="/" passHref>
               <a>
                 <div style={{ ...currentStyles?.logo }}>
-                  <Image
+                  <img
                     src="/register/logo.svg"
                     alt="logo corporativo"
                     width="28"

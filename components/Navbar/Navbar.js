@@ -8,7 +8,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { Divider, useMediaQuery } from "@mui/material";
 import NavbarDesktopStyles from "./NavbarDesktopStyles";
@@ -133,7 +132,7 @@ export default function Navbar() {
         <Toolbar>
           <Link href="#" passHref>
             <div style={{ ...currentStyles?.logo }}>
-              <Image
+              <img
                 src="/logo_white.png"
                 alt="logo corporativo"
                 width="32"

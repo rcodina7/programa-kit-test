@@ -2,7 +2,6 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import Image from "next/image";
 import ServicioDialog from "./ServicioDialog/ServicioDialog";
 
 export default function SingleServicio({ num, card }) {
@@ -28,7 +27,7 @@ export default function SingleServicio({ num, card }) {
         onClick={handleClickOpen}
       >
         <CardActionArea sx={{ textAlign: "center", padding: "1rem 0" }}>
-          <Image
+          <img
             height="65"
             width="65"
             src={`/servicios/${servicioCardLogo[num - 1]}`}
