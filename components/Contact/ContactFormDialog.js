@@ -312,7 +312,6 @@ export default function FullScreenDialog({
                         label="Nombre"
                         name="name"
                         autoComplete="name"
-                        autoFocus
                         variant="standard"
                         required
                         value={formValues?.name ? formValues.name : ""}

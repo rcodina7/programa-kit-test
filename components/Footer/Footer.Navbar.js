@@ -1,8 +1,9 @@
-import { Container } from "@mui/material";
+import { Container, Link } from "@mui/material";
 import styles from "./Footer.module.css";
 import { Box } from "@mui/system";
 
 import React from "react";
+import { NextLinkComposed } from "src/Link";
 
 function FooterNavbar() {
   return (
@@ -35,8 +36,30 @@ function FooterNavbar() {
             Copyright © 2021 Logic Solutions | Todos los derechos reservados
           </p>
           <div className={styles.privacy}>
-            <p className={styles.copyright}>Política de cookies</p>
-            <p className={styles.copyright}>Aviso legal</p>
+            <p className={styles.copyright}>
+              <Link
+                component={NextLinkComposed}
+                to={{
+                  pathname: "https://www.logicsolutions.es/es/cookies",
+                }}
+                underline="hover"
+                sx={{ color: "white" }}
+              >
+                Política de cookies
+              </Link>
+            </p>
+            <p className={styles.copyright}>
+              <Link
+                component={NextLinkComposed}
+                to={{
+                  pathname: "https://www.logicsolutions.es/es/seguridad",
+                }}
+                underline="hover"
+                sx={{ color: "white" }}
+              >
+                Política de seguridad de la información
+              </Link>
+            </p>
           </div>
         </Container>
       </Box>

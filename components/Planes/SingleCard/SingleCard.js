@@ -119,12 +119,12 @@ function SingleCard({ service }) {
               <Typography
                 component="li"
                 variant="subtitle1"
-                align="center"
+                align="left"
                 key={line}
                 sx={{ ...liStyles(service) }}
               >
                 <span style={{ marginRight: "1rem" }}>
-                  <Image
+                  <img
                     height="27"
                     width="27"
                     src={`/planes/${

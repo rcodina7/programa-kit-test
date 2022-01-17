@@ -70,12 +70,12 @@ function FooterContent() {
                 <Link
                   component={NextLinkComposed}
                   to={{
-                    pathname: "https://www.logicsolutions.es/es/sobre-nosotros",
+                    pathname: "https://www.logicsolutions.es/es/privacy",
                   }}
                   underline="hover"
                   sx={{ color: "white" }}
                 >
-                  Nuestro Equipo
+                  Política de privacidad
                 </Link>
               </li>
             </ul>
@@ -96,12 +96,12 @@ function FooterContent() {
                 <Link
                   component={NextLinkComposed}
                   to={{
-                    pathname: "/",
+                    pathname: "https://www.logicsolutions.es/es/aviso",
                   }}
                   underline="hover"
                   sx={{ color: "white" }}
                 >
-                  Pricing
+                  Aviso legal
                 </Link>
               </li>
               <li>
