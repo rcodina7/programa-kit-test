@@ -45,7 +45,7 @@ export default function SingleServicio({ num, card }) {
             >
               {card.title}
             </h4>
-            <p>{card.text}</p>
+            <p style={{ textAlign: "justify" }}>{card.text}</p>
           </CardContent>
         </CardActionArea>
         <CardActions

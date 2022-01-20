@@ -1,7 +1,7 @@
 const getServices = () => [
   {
     title: "Free",
-    price: "0",
+    price: "90",
     service: "Base",
     description: "Servicios que cubrimos",
     options: [

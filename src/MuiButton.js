@@ -14,25 +14,16 @@ function MuiButton(props) {
     isDashboard,
     sx,
     variant,
-    isUserLoggedIn,
     submit,
-    isLogin,
     clickEvent,
     color,
   } = props;
-
-  const [open, setOpen] = useState(false);
 
   //SOLICITUD FORM MODAL
   const [openSolicitud, setOpenSolicitud] = React.useState(false);
   const handleClickOpenSolicitud = () => setOpenSolicitud(true);
   const handleCloseSolicitud = () => setOpenSolicitud(false);
   //************ */
-
-  const handleClickOpen = () => {
-    alert("hhh");
-    setOpen(true);
-  };
 
   const handleOnClickEvent = () => {
     return isDashboard && handleClickOpenSolicitud();
@@ -68,7 +59,6 @@ function MuiButton(props) {
       >
         {text}
       </Button>
-      {/* <FormDialog handleClose={handleClose} open={open} /> */}
       <SolicitudFormDialog
         handleClickOpenSolicitud={handleClickOpenSolicitud}
         handleCloseSolicitud={handleCloseSolicitud}

@@ -59,14 +59,14 @@ export default function SingleCardDesktop({ service }) {
               fontWeight: service.service === "Pro" && "bold",
             }}
           >
-            ${service.price}
+            {service.price}€
           </Typography>
           <Typography
             variant="h6"
             color="text.secondary"
             sx={{ color: service.service === "Pro" && "white" }}
           >
-            /año
+            /gestión
           </Typography>
         </Box>
         <Typography

@@ -23,6 +23,7 @@ import handleContactFormValidation from "utils/contactFormValidation";
 import AlertMessage from "src/AlertMessage";
 import LoadingButton from "@mui/lab/LoadingButton";
 import SendIcon from "@mui/icons-material/Send";
+import emailjs from "@emailjs/browser";
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -68,25 +69,39 @@ export default function FullScreenDialog({
 
   //*********************************************************** */
   const validationSuccess = async () => {
+    const contacto = "Formulario Contacto";
+    const web = "https://kitdigital.logicsolutions.es/";
+    const templateId = { ...formValues, contacto, web };
+
+    const formElement = document.createElement("form");
+
+    for (const el in templateId) {
+      const newInput = document.createElement("input");
+      newInput.setAttribute("value", templateId[el]);
+      newInput.name = el;
+      formElement.append(newInput);
+    }
+
     setLoading(true);
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    }).then((res) => {
-      if (res.status === 200) {
-        setTimeout(() => {
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        formElement,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .then(
+        (result) => {
           setLoading(false);
           setMessageSent(true);
           validationFailed("En breves nos pondremos en contacto!");
           setFormValues("");
-        }, 1000);
-      }
-    });
+        },
+        (e) => {
+          console.log(e.text);
+        }
+      );
   };
 
   //*********************************************************** */
@@ -310,6 +325,7 @@ export default function FullScreenDialog({
                   noValidate
                   onSubmit={handleContactFormSubmit}
                   onChange={handleFormChange}
+                  id="idTest"
                 >
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>

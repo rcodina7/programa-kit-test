@@ -42,8 +42,9 @@ function Beneficios() {
         </h2>
         <p
           style={{
-            maxWidth: "376px",
-            textAlign: isMoreThan900px ? "left" : "center",
+            maxWidth: "476px",
+            // textAlign: isMoreThan900px ? "left" : "center",
+            textAlign: "justify",
           }}
         >
           Somos una empresa de{" "}
@@ -60,8 +61,9 @@ function Beneficios() {
         </p>
         <p
           style={{
-            maxWidth: "376px",
-            textAlign: isMoreThan900px ? "left" : "center",
+            maxWidth: "476px",
+            // textAlign: isMoreThan900px ? "left" : "center",
+            textAlign: "justify",
           }}
         >
           Logic Solutions ofrece una gestión integral de todas las necesidades
