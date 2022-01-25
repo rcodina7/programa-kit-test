@@ -63,9 +63,9 @@ function BeneficiosCarousel() {
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <>
-                <Box
-                  component="img"
-                  sx={{
+                <img
+                  // component="img"
+                  style={{
                     height: 285,
                     display: "block",
                     maxWidth: 500,

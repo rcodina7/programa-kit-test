@@ -34,7 +34,7 @@ function Hero({ isUserLoggedIn }) {
         <p className="white" style={{ ...currentStyles?.p }}>
           En nuestro papel como{" "}
           <span style={{ color: "#79b44c", fontWeight: 700 }}>
-            Empresa Digitalizadora Voluntaria
+            Agentes Digitalizadores
           </span>
           , te acompañamos y asesoramos durante todo el camino para aprovechar
           esta{" "}
