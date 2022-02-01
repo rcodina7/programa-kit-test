@@ -40,12 +40,6 @@ const displayCardHeader = (service) => {
 };
 
 function SingleCard({ service }) {
-  //SOLICITUD FORM MODAL
-  const [openSolicitud, setOpenSolicitud] = React.useState(false);
-  const handleClickOpenSolicitud = () => setOpenSolicitud(true);
-  const handleCloseSolicitud = () => setOpenSolicitud(false);
-  //************ */
-
   return (
     <Grid item key={service.title} xs={12} sm={12} md={12}>
       <Card
@@ -152,21 +146,12 @@ function SingleCard({ service }) {
             justifyContent: "center",
           }}
         >
-          {service.buttonText === "Quiero este plan" ? (
-            <SolicitudFormDialog
-              handleClickOpenSolicitud={handleClickOpenSolicitud}
-              handleCloseSolicitud={handleCloseSolicitud}
-              openSolicitud={openSolicitud}
-              type={"solicitudService2"}
-            />
-          ) : (
-            <SolicitudFormDialog
-              handleClickOpenSolicitud={handleClickOpenSolicitud}
-              handleCloseSolicitud={handleCloseSolicitud}
-              openSolicitud={openSolicitud}
-              type={"solicitudServiceFull2"}
-            />
-          )}
+          <MuiButton
+            fullWidth
+            text="Quiero este plan"
+            isStripe
+            sx={{ maxWidth: "30rem" }}
+          />
         </CardActions>
       </Card>
     </Grid>

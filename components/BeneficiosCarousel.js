@@ -73,6 +73,7 @@ function BeneficiosCarousel() {
                     width: "100%",
                     borderTopLeftRadius: "15px",
                     borderTopRightRadius: "15px",
+                    objectFit: "cover",
                   }}
                   src={step.imgPath}
                   alt={step.label}

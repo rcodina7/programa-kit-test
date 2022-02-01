@@ -55,8 +55,8 @@ function Hero({ isUserLoggedIn }) {
           <MuiButton
             sx={{ ...currentStyles?.btn, color: "white" }}
             text={"Solicitar ahora"}
-            isDashboard
             color="secondary"
+            isDashboard
           />
         )}
       </div>

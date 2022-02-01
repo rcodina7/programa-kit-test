@@ -61,12 +61,21 @@ export default function SingleCardDesktop({ service }) {
           >
             {service.price}€
           </Typography>
+
           <Typography
             variant="h6"
             color="text.secondary"
             sx={{ color: service.service === "Pro" && "white" }}
           >
             /gestión
+          </Typography>
+          <Typography
+            variant="caption"
+            display="block"
+            gutterBottom
+            sx={{ ml: 1, color: service.service === "Pro" && "white" }}
+          >
+            + IVA
           </Typography>
         </Box>
         <Typography
@@ -99,47 +108,65 @@ export default function SingleCardDesktop({ service }) {
             alignItems: "baseline",
           }}
         >
-          {service.options.map((line) => (
-            <Typography
-              component="li"
-              variant="subtitle1"
-              align="center"
-              key={line}
-              sx={{ ...liStyles(service) }}
-            >
-              <span
-                style={{
-                  marginRight: "1rem",
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  lineHeight: "22px",
+          {service.options.map((line, index) =>
+            index !== 3 ? (
+              <Typography
+                component="li"
+                variant="subtitle1"
+                align="left"
+                key={line}
+                sx={{
+                  ...liStyles(service),
+                  mb: "10px",
                 }}
               >
-                <img
-                  height="27"
-                  width="27"
-                  src={`/planes/${
-                    service.service === "Base"
-                      ? "check_circle_purple.svg"
-                      : "check_circle_green.svg"
-                  }`}
-                  alt="decorative check mark icon"
-                />
-              </span>
-              {line}
-            </Typography>
-          ))}
+                <span
+                  style={{
+                    marginRight: "1rem",
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    lineHeight: "22px",
+                  }}
+                >
+                  <img
+                    height="27"
+                    width="27"
+                    src={`/planes/${
+                      service.service === "Base"
+                        ? "check_circle_purple.svg"
+                        : "check_circle_green.svg"
+                    }`}
+                    alt="decorative check mark icon"
+                  />
+                </span>
+                {line}
+              </Typography>
+            ) : (
+              <p
+                style={{
+                  maxWidth: "300px",
+                  fontWeight: 500,
+                  fontSize: "18px",
+                  lineHeight: "22px",
+                  color: service.service === "Base" ? "#848199" : "white",
+                }}
+              >
+                Servicios que ofrecemos
+              </p>
+            )
+          )}
         </ul>
       </CardContent>
       <CardActions>
         {service.buttonText === "Quiero este plan" ? (
-          <MuiButton fullWidth text="Quiero este plan" />
+          <MuiButton fullWidth text="Quiero este plan" isStripe />
         ) : (
           <MuiButton
             fullWidth
             text="Quiero este plan"
             opacity={0.15}
             customColor
+            isStripe
           />
         )}
       </CardActions>

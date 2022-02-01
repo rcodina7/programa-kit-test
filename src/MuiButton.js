@@ -17,7 +17,9 @@ function MuiButton(props) {
     submit,
     clickEvent,
     color,
+    isStripe,
   } = props;
+  const router = useRouter();
 
   //SOLICITUD FORM MODAL
   const [openSolicitud, setOpenSolicitud] = React.useState(false);
@@ -25,8 +27,13 @@ function MuiButton(props) {
   const handleCloseSolicitud = () => setOpenSolicitud(false);
   //************ */
 
+  const handleStripePayment = () => {
+    alert("hola");
+  };
+
   const handleOnClickEvent = () => {
-    return isDashboard && handleClickOpenSolicitud();
+    isDashboard && router.push("/#servicios");
+    isStripe && handleStripePayment();
   };
 
   return (

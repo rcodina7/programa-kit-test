@@ -29,7 +29,7 @@ function Planes() {
           <h2>Soluciones digitales</h2>
         </div>
       </Box>
-      <Pricing />
+      {isMoreThan1000px ? <PricingDesktop /> : <Pricing />}
     </>
   );
 }

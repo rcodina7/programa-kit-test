@@ -29,12 +29,6 @@ export default function Navbar() {
   const handleClose = () => setOpen(false);
   //************ */
 
-  //SOLICITUD FORM MODAL
-  const [openSolicitud, setOpenSolicitud] = useState(false);
-  const handleClickOpenSolicitud = () => setOpenSolicitud(true);
-  const handleCloseSolicitud = () => setOpenSolicitud(false);
-  //************ */
-
   useEffect(
     () =>
       setCurrentStyles(
@@ -99,13 +93,7 @@ export default function Navbar() {
         </MenuItem>
       </Link>
       <Divider />
-      <SolicitudFormDialog
-        currentStyles={currentStyles?.li}
-        handleClickOpenSolicitud={handleClickOpenSolicitud}
-        handleCloseSolicitud={handleCloseSolicitud}
-        openSolicitud={openSolicitud}
-        type={"solicitud"}
-      />
+
       <Link href="#sobre-nosotros">
         <MenuItem>
           <p>Sobre nosotros</p>
@@ -165,15 +153,6 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              <li className={styles.li}>
-                <SolicitudFormDialog
-                  currentStyles={currentStyles?.li}
-                  handleClickOpenSolicitud={handleClickOpenSolicitud}
-                  handleCloseSolicitud={handleCloseSolicitud}
-                  openSolicitud={openSolicitud}
-                  type={"solicitudDesktop"}
-                />
-              </li>
               <li className={styles.li}>
                 <Link
                   variant="button"

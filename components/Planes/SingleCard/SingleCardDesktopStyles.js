@@ -4,7 +4,7 @@ export const singleCardStyles = (service) => ({
   width: service.service === "Base" ? 962 : 384,
   position: service.service === "Base" ? "absolute" : "relative",
   top: service.service === "Pro" ? "-3rem" : "unset",
-  right: service.service === "Pro" ? "-13rem" : "unset",
+  right: service.service === "Pro" ? "-16rem" : "unset",
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",

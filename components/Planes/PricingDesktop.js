@@ -1,10 +1,10 @@
 import { Box } from "@mui/system";
 import React from "react";
-import getServices from "utils/getServices";
+import getServices2 from "utils/getServices2";
 import SingleCardDesktop from "./SingleCard/SingleCardDesktop";
 
 function PricingDesktop() {
-  const services = getServices();
+  const services = getServices2();
 
   return (
     <Box
@@ -15,7 +15,7 @@ function PricingDesktop() {
         alignItems: "center",
         flexWrap: "wrap",
         gap: "1rem",
-        mt: 10,
+        mt: 20,
       }}
     >
       {services.map((service) => (
