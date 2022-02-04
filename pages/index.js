@@ -14,6 +14,9 @@ import Contact from "components/Contact/Contact";
 import Navbar from "components/Navbar/Navbar";
 import { AuthContext } from "contexts/auth.context";
 import ServiciosOfrecemos from "components/ServiciosOfrecemos";
+import ServiciosOfrecemos2 from "components/ServiciosOfrecemos2";
+import ServiciosOfrecemos3 from "components/ServiciosOfrecemos3";
+import ServiciosOfrecemos4 from "components/ServiciosOfrecemos4";
 
 export default function Home() {
   return (
@@ -61,6 +64,10 @@ export default function Home() {
           <Servicios />
           <Beneficios />
           <ServiciosOfrecemos />
+          <ServiciosOfrecemos2 />
+          <ServiciosOfrecemos3 />
+          <ServiciosOfrecemos2 test />
+          <ServiciosOfrecemos4 />
           <Planes />
           <Testimonios />
           <FAQ />
