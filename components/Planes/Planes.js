@@ -25,7 +25,7 @@ function Planes() {
           />
         ) : null}
         <div style={{ textAlign: "center" }}>
-          <h3>SERVICIOS</h3>
+          <h3>PLANES</h3>
           <h2>Soluciones digitales</h2>
         </div>
       </Box>

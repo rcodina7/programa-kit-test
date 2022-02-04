@@ -13,6 +13,7 @@ import Footer from "components/Footer/Footer";
 import Contact from "components/Contact/Contact";
 import Navbar from "components/Navbar/Navbar";
 import { AuthContext } from "contexts/auth.context";
+import ServiciosOfrecemos from "components/ServiciosOfrecemos";
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
         <Container maxWidth="xl">
           <Servicios />
           <Beneficios />
+          <ServiciosOfrecemos />
           <Planes />
           <Testimonios />
           <FAQ />
