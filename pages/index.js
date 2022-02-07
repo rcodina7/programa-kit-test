@@ -64,10 +64,10 @@ export default function Home() {
           <Servicios />
           <Beneficios />
           <ServiciosOfrecemos />
-          <ServiciosOfrecemos2 />
+          {/* <ServiciosOfrecemos2 />
           <ServiciosOfrecemos3 />
           <ServiciosOfrecemos2 test />
-          <ServiciosOfrecemos4 />
+          <ServiciosOfrecemos4 /> */}
           <Planes />
           <Testimonios />
           <FAQ />

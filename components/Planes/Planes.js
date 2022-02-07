@@ -9,7 +9,7 @@ function Planes() {
 
   return (
     <>
-      <Box component="section" id="servicios" sx={{ mt: { xs: 15, md: 22 } }}>
+      <Box component="section" id="planes" sx={{ mt: { xs: 15, md: 22 } }}>
         {isMoreThan1000px ? (
           <img
             src="/page/planes_bg.svg"

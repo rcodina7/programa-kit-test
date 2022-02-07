@@ -3,7 +3,7 @@ export const singleCardStyles = (service) => ({
     service.service === "Pro" ? theme.palette.primary.main : "default",
   width: service.service === "Base" ? 962 : 384,
   position: service.service === "Base" ? "absolute" : "relative",
-  top: service.service === "Pro" ? "-3rem" : "unset",
+  top: service.service === "Pro" ? "-1.3rem" : "unset",
   right: service.service === "Pro" ? "-16rem" : "unset",
   display: "flex",
   flexDirection: "column",

@@ -159,7 +159,12 @@ export default function SingleCardDesktop({ service }) {
       </CardContent>
       <CardActions>
         {service.buttonText === "Quiero este plan" ? (
-          <MuiButton fullWidth text="Quiero este plan" isStripe />
+          <MuiButton
+            fullWidth
+            text="Quiero este plan"
+            isStripe
+            plan={service.service}
+          />
         ) : (
           <MuiButton
             fullWidth
@@ -167,6 +172,7 @@ export default function SingleCardDesktop({ service }) {
             opacity={0.15}
             customColor
             isStripe
+            plan={service.service}
           />
         )}
       </CardActions>

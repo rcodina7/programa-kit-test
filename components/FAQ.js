@@ -20,7 +20,7 @@ export default function FAQ() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        mt: { xs: 10, md: 10 },
+        mt: { xs: 5, md: 5 },
       }}
     >
       {isMoreThan1000px ? (

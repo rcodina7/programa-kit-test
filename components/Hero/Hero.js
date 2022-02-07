@@ -68,7 +68,12 @@ function Hero({ isUserLoggedIn }) {
       />
 
       {!isMoreThan800px && (
-        <MuiButton fullWidth text={"Solicitar ahora"} isDashboard />
+        <MuiButton
+          fullWidth
+          text={"Solicitar ahora"}
+          isDashboard
+          sx={{ mt: "-5rem" }}
+        />
       )}
     </Box>
   );

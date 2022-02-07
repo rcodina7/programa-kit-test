@@ -49,7 +49,7 @@ function Testimonios() {
           display: isMoreThan800px ? "flex" : "block",
           gap: isMoreThan1000px ? "4rem" : "0rem",
           margin: "10rem 0",
-          mt: { xs: 15, md: 22 },
+          mt: { xs: 10, md: 17 },
           mb: 0,
         }}
       >

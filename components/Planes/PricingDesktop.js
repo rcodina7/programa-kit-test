@@ -15,7 +15,7 @@ function PricingDesktop() {
         alignItems: "center",
         flexWrap: "wrap",
         gap: "1rem",
-        mt: 20,
+        mt: 10,
       }}
     >
       {services.map((service) => (

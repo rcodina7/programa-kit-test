@@ -11,14 +11,14 @@ function ServiciosOfrecemos() {
   return (
     <Box
       component="section"
-      id="sobre-nosotros"
       sx={{
         mt: { xs: 5, md: 12 },
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
-        flexWrap: "wrap",
+        flexWrap: "wrap-reverse",
       }}
+      id="servicios"
     >
       {isMoreThan1000px ? (
         <img

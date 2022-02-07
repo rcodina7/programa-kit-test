@@ -92,6 +92,11 @@ export default function Navbar() {
           <p style={{ width: 220 }}>Servicios</p>
         </MenuItem>
       </Link>
+      <Link href="#planes">
+        <MenuItem>
+          <p style={{ width: 220 }}>Planes</p>
+        </MenuItem>
+      </Link>
       <Divider />
 
       <Link href="#sobre-nosotros">
@@ -150,6 +155,16 @@ export default function Navbar() {
                   sx={{ ...currentStyles?.li }}
                 >
                   Servicios
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link
+                  variant="button"
+                  color="text.primary"
+                  href="#planes"
+                  sx={{ ...currentStyles?.li }}
+                >
+                  Planes
                 </Link>
               </li>
 

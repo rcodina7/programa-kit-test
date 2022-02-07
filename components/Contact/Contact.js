@@ -36,8 +36,8 @@ function Contacto() {
               width: "67px",
               height: "69px",
               position: "absolute",
-              top: "310rem",
-              right: "1rem",
+              top: "330rem",
+              right: "-1rem",
               zIndex: 200,
             }}
           />

@@ -3,6 +3,13 @@ import Button from "@mui/material/Button";
 import { alpha } from "@mui/system";
 import SolicitudFormDialog from "components/Solicitud/SolicitudFormDialog";
 import { useRouter } from "next/router";
+import { loadStripe } from "@stripe/stripe-js";
+
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+// const stripePromise = loadStripe(
+//   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+// );
 
 function MuiButton(props) {
   const {
@@ -18,8 +25,23 @@ function MuiButton(props) {
     clickEvent,
     color,
     isStripe,
+    plan,
   } = props;
   const router = useRouter();
+
+  // React.useEffect(() => {
+  //   // Check to see if this is a redirect back from Checkout
+  //   const query = new URLSearchParams(window.location.search);
+  //   if (query.get("success")) {
+  //     console.log("Order placed! You will receive an email confirmation.");
+  //   }
+
+  //   if (query.get("canceled")) {
+  //     console.log(
+  //       "Order canceled -- continue to shop around and checkout when you’re ready."
+  //     );
+  //   }
+  // }, []);
 
   //SOLICITUD FORM MODAL
   const [openSolicitud, setOpenSolicitud] = React.useState(false);
@@ -28,11 +50,15 @@ function MuiButton(props) {
   //************ */
 
   const handleStripePayment = () => {
-    alert("hola");
+    router.push(
+      plan === "Base"
+        ? "https://buy.stripe.com/aEUeWm5llbwd0367st"
+        : "https://buy.stripe.com/aEU5lMdRR6bT5nq6oq"
+    );
   };
 
   const handleOnClickEvent = () => {
-    isDashboard && router.push("/#servicios");
+    isDashboard && router.push("/#planes");
     isStripe && handleStripePayment();
   };
 

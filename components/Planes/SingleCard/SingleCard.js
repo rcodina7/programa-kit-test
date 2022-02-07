@@ -151,6 +151,7 @@ function SingleCard({ service }) {
             text="Quiero este plan"
             isStripe
             sx={{ maxWidth: "30rem" }}
+            plan={service.service}
           />
         </CardActions>
       </Card>
